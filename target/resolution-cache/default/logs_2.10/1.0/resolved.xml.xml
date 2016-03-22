@@ -4,7 +4,7 @@
 		module="logs_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20160321151443"
+		publication="20160322114234"
 	>
 		<description>
 		Logs
@@ -34,5 +34,6 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.10.6" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.10.6" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-core_2.10" rev="1.6.1" conf="provided->default(compile)"/>
 	</dependencies>
 </ivy-module>

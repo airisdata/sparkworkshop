@@ -3,3 +3,7 @@
   git add --all
   git commit -m "Updated"
   git push -u origin master
+
+ # git remote add origin git@github.com:agilemobiledev/sparkworkshop.git
+git remote -v
+git push origin master

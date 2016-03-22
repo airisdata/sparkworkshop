@@ -1162,9 +1162,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.jar
-[debug] :: resolution report :: resolve 1473ms :: artifacts dl 44ms
+[debug] :: resolution report :: resolve 4685ms :: artifacts dl 77ms
 [debug] 	report for default#logs$sbt_2.10;1.0 default produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sbt_2.10-default.xml
-[debug] 	resolve done (1473ms resolve - 44ms download)
+[debug] 	resolve done (4685ms resolve - 77ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#logs$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -1724,6 +1724,6 @@
 [debug] 	[NOT REQUIRED] org.eclipse.sisu#org.eclipse.sisu.inject;0.3.0!org.eclipse.sisu.inject.jar(src)
 [debug] 	[NOT REQUIRED] org.codehaus.plexus#plexus-component-annotations;1.5.5!plexus-component-annotations.jar(src)
 [debug] 	[NOT REQUIRED] org.codehaus.plexus#plexus-classworlds;2.5.2!plexus-classworlds.jar(src)
-[debug] :: resolution report :: resolve 266ms :: artifacts dl 70ms
+[debug] :: resolution report :: resolve 195ms :: artifacts dl 74ms
 [debug] 	report for default#logs$sources_2.10;1.0 default produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-default.xml
-[debug] 	resolve done (266ms resolve - 70ms download)
+[debug] 	resolve done (195ms resolve - 74ms download)
