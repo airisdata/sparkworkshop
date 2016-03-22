@@ -10,16 +10,54 @@ import org.apache.spark.rdd.RDD
   * Created by timothyspann on 3/21/16.
   */
 
-case class LogRecord( clientIp: String, clientIdentity: String, dateTime: String, request:String, statusCode:String, bytesSent:String, referer:String, userAgent:String )
+case class LogRecord( clientIp: String, clientIdentity: String, user: String, dateTime: String, request:String,
+                      statusCode:Int, bytesSent:Long, referer:String, userAgent:String )
 
 object Logs {
 
+  //// Head doesn't send bytes
+  //// 192.0.101.226 - - [24/Feb/2016:06:27:43 -0500] "HEAD / HTTP/1.1" 200 - "-" "jetmon/1.0 (Jetpack Site Uptime Monitor by WordPress.com)"
+  //// 157.55.39.97 - - [24/Feb/2016:04:24:18 -0500] "GET /2013/07/23/ipv4stack-for-java/ HTTP/1.1" 200 21314 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+  //// regular expression pattern for log records
+    val PATTERN = """^(\S+) (\S+) (\S+) \[([\w:/]+\s[+\-]\d{4})\] "(\S+) (\S+) (\S+)" (\d{3}) (\S+) "(\S+)" "([^"]*)"""".r
+
+  //// parse the Common Apache Format into a LogRecord case class
+    def parseLogLine(log: String): LogRecord = {
+      try {
+        val res = PATTERN.findFirstMatchIn(log)
+
+        if (res.isEmpty || res.toString.equals("None")) {
+          println("Log Line: " + log)
+
+          LogRecord("Empty", "-", "-", "", "",  -1, -1, "-", "-" )
+        }
+        else {
+          val m = res.get
+          if (m.group(9).equals("-")) {
+            LogRecord(m.group(1), m.group(2), m.group(3), m.group(4),
+              m.group(5), m.group(8).toInt, 0, m.group(10), m.group(11))
+          }
+          else {
+            LogRecord(m.group(1), m.group(2), m.group(3), m.group(4),
+              m.group(5), m.group(8).toInt, m.group(9).toLong, m.group(10), m.group(11))
+          }
+        }
+      } catch
+      {
+        case e: Exception =>
+          println("Exception:" + e.getMessage);
+          LogRecord("Empty", "-", "-", "", "-", -1, -1, "-", "-" )
+      }
+    }
+
+
+  //// Main Spark Program
   def main(args: Array[String]) {
     Logger.getLogger("org.apache.spark").setLevel(Level.WARN)
     Logger.getLogger("org.apache.spark.storage.BlockManager").setLevel(Level.ERROR)
 
     val sparkConf = new SparkConf().setAppName("Logs")
-    sparkConf.set("spark.cores.max", "2")
+    sparkConf.set("spark.cores.max", "4")
     sparkConf.set("spark.serializer", classOf[KryoSerializer].getName)
     sparkConf.set("spark.sql.tungsten.enabled", "true")
     sparkConf.set("spark.eventLog.enabled", "true")
@@ -28,7 +66,7 @@ object Logs {
     sparkConf.set("spark.rdd.compress", "true")
     sparkConf.set("spark.streaming.backpressure.enabled", "true")
 
-    println("# of Cores Available: ", Runtime.getRuntime().availableProcessors())
+    println("# of Cores Available: " + Runtime.getRuntime().availableProcessors())
 
     // Get Spark Context
     val sc = new SparkContext(sparkConf)
@@ -44,20 +82,35 @@ object Logs {
 
     val logFile = sc.textFile("access2.log")
 
-    println("Log count: " +  logFile.count())
-
-    val chunks = logFile.map {
-      line =>
-        val part = line.split(" ")
-        val id = part(0)
-        val record = LogRecord( part(0), part(1), part(2), part(3), part(4), part(5), part(6), part(7) )
-        (id, record)
-    }
-
-    chunks.cache()
+    val accessLogs = logFile.map(parseLogLine).cache()
 
     try {
-      chunks.take(10).foreach(println)
+      println("Log Count: " + accessLogs.count())
+      println("First Ten Records")
+      accessLogs.take(10).foreach(println)
+
+      // Calculate statistics based on the content size.
+      val contentSizes = accessLogs.map(log => log.bytesSent).cache()
+      println("Content Size Avg: %s, Min: %s, Max: %s".format(
+        contentSizes.reduce(_ + _) / contentSizes.count,
+        contentSizes.min,
+        contentSizes.max))
+
+      // Compute Response Code to Count.
+      val responseCodeToCount = accessLogs
+        .map(log => (log.statusCode, 1))
+        .reduceByKey(_ + _)
+        .take(100)
+      println(s"""Status Code counts: ${responseCodeToCount.mkString("[", ",", "]")}""")
+
+      // Any IPAddress that has accessed the server more than 10 times.
+      val ipAddresses = accessLogs
+        .map(log => (log.clientIp, 1))
+        .reduceByKey(_ + _)
+        .filter(_._2 > 10)
+        .map(_._1)
+        .take(100)
+      println(s"""IP Addresses Accessed > 10 times: ${ipAddresses.mkString("[", ",", "]")}""")
 
     } catch
     {
@@ -68,10 +121,10 @@ object Logs {
 
     // action
 
-//    println("Baidu Spider Access: %s", chunks.filter(_.contains("Baiduspider")).count())
-//    println("Googlebot Spider Access: %s", chunks.filter(_.contains("Googlebot")).count())
-//    println("404 Pages Not Found: %s", chunks.filter(_.contains("404")).count())
-//    println("500 Internal Errors: %s", chunks.filter(_.contains("500")).count())
+//    println("Baidu Spider Access: %s", accessLogs.filter(_.contains("Baiduspider")).count())
+//    println("Googlebot Spider Access: %s", accessLogs.filter(_.contains("Googlebot")).count())
+//    println("404 Pages Not Found: %s", accessLogs.filter(_.contains("404")).count())
+//    println("500 Internal Errors: %s", accessLogs.filter(_.contains("500")).count())
 
 //    // Filter file by string
 //    val errors = logFile.filter( _.contains("500"))
