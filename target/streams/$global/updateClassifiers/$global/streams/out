@@ -1,0 +1,193 @@
+[debug] :: resolving dependencies :: default#logs$sources_2.10;1.0
+[debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
+[debug] 	validate = true
+[debug] 	refresh = false
+[debug] resolving dependencies for configuration 'compile'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
+[info] Resolving org.scala-lang#scala-library;2.10.6 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2c502652
+[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.6
+[debug] 	found org.scala-lang#scala-library;2.10.6 in sbt-chain
+[debug] 	[2.10.6] org.scala-lang#scala-library;2.10.6
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->master]
+[debug] resolving dependencies for configuration 'runtime'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [runtime]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->master]
+[debug] resolving dependencies for configuration 'test'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [test]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [runtime]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->master]
+[debug] resolving dependencies for configuration 'provided'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [provided]
+[debug] resolving dependencies for configuration 'optional'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [optional]
+[debug] resolving dependencies for configuration 'compile-internal'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [compile-internal]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->master]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [optional]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [provided]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile-internal->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile-internal->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile-internal->master]
+[debug] resolving dependencies for configuration 'runtime-internal'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [runtime-internal]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [runtime]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->master]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [optional]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime-internal->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime-internal->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime-internal->master]
+[debug] resolving dependencies for configuration 'test-internal'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [test-internal]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [test]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [runtime]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [compile->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [runtime->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test->master]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [optional]
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [provided]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test-internal->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test-internal->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test-internal->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [test-internal->master]
+[debug] resolving dependencies for configuration 'plugin'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [plugin]
+[debug] resolving dependencies for configuration 'sources'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [sources]
+[debug] resolving dependencies for configuration 'docs'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [docs]
+[debug] resolving dependencies for configuration 'pom'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [pom]
+[debug] resolving dependencies for configuration 'scala-tool'
+[debug] == resolving dependencies for default#logs$sources_2.10;1.0 [scala-tool]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [scala-tool->default(compile)]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [scala-tool->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [scala-tool->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-library;2.10.6 [scala-tool->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [scala-tool->default(compile)]
+[info] Resolving org.scala-lang#scala-compiler;2.10.6 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.6 {scala-tool=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.6
+[debug] 	found org.scala-lang#scala-compiler;2.10.6 in sbt-chain
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [scala-tool->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [scala-tool->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-compiler;2.10.6 [scala-tool->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [scala-tool->default(compile)]
+[info] Resolving org.scala-lang#scala-reflect;2.10.6 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.6 {scala-tool=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.6
+[debug] 	found org.scala-lang#scala-reflect;2.10.6 in sbt-chain
+[debug] 	[2.10.6] org.scala-lang#scala-reflect;2.10.6
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [scala-tool->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [scala-tool->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#scala-reflect;2.10.6 [scala-tool->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#jline;2.10.6 [scala-tool->default(compile)]
+[info] Resolving org.scala-lang#jline;2.10.6 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.6 {scala-tool=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang#jline;2.10.6
+[debug] 	found org.scala-lang#jline;2.10.6 in sbt-chain
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#jline;2.10.6 [scala-tool->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#jline;2.10.6 [scala-tool->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.scala-lang#jline;2.10.6 [scala-tool->master]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.fusesource.jansi#jansi;1.4 [scala-tool->default(compile)]
+[info] Resolving org.fusesource.jansi#jansi;1.4 ...
+[debug] sbt-chain: Checking cache for: dependency: org.fusesource.jansi#jansi;1.4 {scala-tool=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
+[debug] 	found org.fusesource.jansi#jansi;1.4 in sbt-chain
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.fusesource.jansi#jansi;1.4 [scala-tool->runtime]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.fusesource.jansi#jansi;1.4 [scala-tool->compile]
+[debug] == resolving dependencies default#logs$sources_2.10;1.0->org.fusesource.jansi#jansi;1.4 [scala-tool->master]
+[debug] 	resolved ivy file produced in cache
+[debug] :: downloading artifacts ::
+[debug] 		tried /Users/timothyspann/.ivy2/local/org.scala-lang/scala-library/2.10.6/srcs/scala-library-sources.jar
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.6!scala-library.jar
+[debug] 		tried https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar
+[info] downloading https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar ...
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar.sha1
+[debug] sha1 OK for https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar
+[info] 	[SUCCESSFUL ] org.scala-lang#scala-library;2.10.6!scala-library.jar(src) (835ms)
+[debug] 		tried /Users/timothyspann/.ivy2/local/org.scala-lang/scala-compiler/2.10.6/srcs/scala-compiler-sources.jar
+[debug] 		tried https://jcenter.bintray.com/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar
+[info] downloading https://jcenter.bintray.com/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar ...
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar.sha1
+[debug] sha1 OK for https://jcenter.bintray.com/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar
+[info] 	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src) (1106ms)
+[debug] 		tried /Users/timothyspann/.ivy2/local/org.scala-lang/scala-reflect/2.10.6/srcs/scala-reflect-sources.jar
+[debug] 		tried https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar
+[info] downloading https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar ...
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar.sha1
+[debug] sha1 OK for https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar
+[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.6!scala-reflect.jar(src) (773ms)
+[debug] 		tried /Users/timothyspann/.ivy2/local/org.scala-lang/jline/2.10.6/srcs/jline-sources.jar
+[debug] 		tried https://jcenter.bintray.com/org/scala-lang/jline/2.10.6/jline-2.10.6-sources.jar
+[info] downloading https://jcenter.bintray.com/org/scala-lang/jline/2.10.6/jline-2.10.6-sources.jar ...
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/jline/2.10.6/jline-2.10.6-sources.jar
+[debug] 	jcenter: downloading https://jcenter.bintray.com/org/scala-lang/jline/2.10.6/jline-2.10.6-sources.jar.sha1
+[debug] sha1 OK for https://jcenter.bintray.com/org/scala-lang/jline/2.10.6/jline-2.10.6-sources.jar
+[info] 	[SUCCESSFUL ] org.scala-lang#jline;2.10.6!jline.jar(src) (476ms)
+[debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar(src)
+[debug] :: resolution report :: resolve 51ms :: artifacts dl 3200ms
+[debug] 	report for default#logs$sources_2.10;1.0 compile produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-compile.xml
+[debug] 	report for default#logs$sources_2.10;1.0 runtime produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-runtime.xml
+[debug] 	report for default#logs$sources_2.10;1.0 test produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-test.xml
+[debug] 	report for default#logs$sources_2.10;1.0 provided produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-provided.xml
+[debug] 	report for default#logs$sources_2.10;1.0 optional produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-optional.xml
+[debug] 	report for default#logs$sources_2.10;1.0 compile-internal produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-compile-internal.xml
+[debug] 	report for default#logs$sources_2.10;1.0 runtime-internal produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-runtime-internal.xml
+[debug] 	report for default#logs$sources_2.10;1.0 test-internal produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-test-internal.xml
+[debug] 	report for default#logs$sources_2.10;1.0 plugin produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-plugin.xml
+[debug] 	report for default#logs$sources_2.10;1.0 sources produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-sources.xml
+[debug] 	report for default#logs$sources_2.10;1.0 docs produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-docs.xml
+[debug] 	report for default#logs$sources_2.10;1.0 pom produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-pom.xml
+[debug] 	report for default#logs$sources_2.10;1.0 scala-tool produced in /Volumes/timdata/projects/Logs/target/resolution-cache/reports/default-logs$sources_2.10-scala-tool.xml
+[debug] 	resolve done (51ms resolve - 3200ms download)
