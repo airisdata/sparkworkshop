@@ -18,13 +18,13 @@ object Logs {
       try {
         val res = PATTERN.findFirstMatchIn(log)
 
-        if (res.isEmpty || res.toString.equals("None")) {
+        if (res.isEmpty) {
           println("Rejected Log Line: " + log)
           LogRecord("Empty", "-", "-", "", "",  -1, -1, "-", "-" )
         }
         else {
           val m = res.get
-          // NOTE:   Head does not have a content size.
+          // NOTE:   HEAD does not have a content size.
           if (m.group(9).equals("-")) {
             LogRecord(m.group(1), m.group(2), m.group(3), m.group(4),
               m.group(5), m.group(8).toInt, 0, m.group(10), m.group(11))
@@ -59,12 +59,11 @@ object Logs {
 
     val logFile = sc.textFile("access2.log")
 
-    val accessLogs = logFile.map(parseLogLine).cache()
+    val accessLogs = logFile.map(parseLogLine).filter(!_.clientIp.equals("Empty")).cache()
 
     try {
       println("Log Count: %s".format(accessLogs.count()))
       accessLogs.take(25).foreach(println)
-
       // Calculate statistics based on the content size.
       val contentSizes = accessLogs.map(log => log.bytesSent).cache()
       val contentTotal = contentSizes.reduce(_ + _)
